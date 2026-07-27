@@ -41,7 +41,7 @@ animation:float 8s linear infinite;
 }
 
 .card{
-background:white;
+background:#fff;
 width:360px;
 padding:30px;
 border-radius:20px;
@@ -66,21 +66,14 @@ border:none;
 border-radius:30px;
 font-size:18px;
 background:#e91e63;
-color:white;
+color:#fff;
 cursor:pointer;
 margin:8px;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.05);
-background:#c2185b;
 }
 
 #msg{
 display:none;
 margin-top:20px;
-color:#444;
 font-size:20px;
 font-weight:bold;
 }
@@ -112,22 +105,24 @@ Stay Happy 😊<br><br>
 🎂 Enjoy Your Day 🎉
 </div>
 
-<audio id="music">
-<source src="music.mp3" type="audio/mpeg">
+<audio id="music" preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 </div>
 
 <script>
-
 function playMusic(){
-document.getElementById("music").play();
+    const music=document.getElementById("music");
+    music.play().catch(function(error){
+        alert("Music file મળી નથી અથવા play થતી નથી.");
+        console.log(error);
+    });
 }
 
 function showSurprise(){
-document.getElementById("msg").style.display="block";
+    document.getElementById("msg").style.display="block";
 }
-
 </script>
 
 </body>
