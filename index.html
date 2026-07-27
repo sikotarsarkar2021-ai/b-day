@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +39,8 @@ body{
 .balloon:nth-child(5){left:90%;animation-delay:3s;}
 
 @keyframes float{
-0%{transform:translateY(0);}
-100%{transform:translateY(-120vh);}
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-120vh);}
 }
 
 .card{
@@ -79,7 +80,9 @@ button:hover{
     transform:scale(1.05);
 }
 
+/* Hidden videos */
 .video-box{
+    display:none;
     margin-top:20px;
 }
 
@@ -110,25 +113,24 @@ video{
 
 <h1>🎂 Happy Birthday Vaibhav 🎉</h1>
 
-<p>A Special Surprise Is Waiting For You ❤️</p>
+<p>A Special Surprise Is WEB For You ❤️</p>
 
 <button onclick="playMusic()">🎵 Play Birthday Song</button>
 
+<!-- Hidden Videos -->
+<div class="video-box" id="videos">
+
 <h2 style="color:#e91e63;">🎥 Birthday Surprise Videos</h2>
-
-<div class="video-box">
-
-<video controls>
-    <source src="VIDEO 1.mp4" type="video/mp4">
-    Your browser does not support video.
-</video>
 
 <video controls>
     <source src="VIDEO 2.mp4" type="video/mp4">
     Your browser does not support video.
 </video>
 
-</div>
+<video controls>
+    <source src="VIDEO 1.mp4" type="video/mp4">
+    Your browser does not support video.
+</video>
 
 <div style="font-size:20px;font-weight:bold;color:#e91e63;">
 🥳 Happy Birthday Vaibhav ❤️
@@ -136,8 +138,10 @@ video{
 May God Bless You Always 🙏
 <br>
 Stay Happy 😊
-<br>
-Enjoy Your Special Day 🎂🎉
+<br><br>
+🎂 Enjoy Your Special Day 🎉
+</div>
+
 </div>
 
 <div class="footer">
@@ -145,20 +149,31 @@ Made with ❤️ By Maulik
 </div>
 
 <audio id="music">
-    <source src="music 3.mpeg" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 </div>
 
 <script>
-function playMusic(){
-    const music=document.getElementById("music");
 
-    music.play().catch(()=>{
-        alert("music.mp3 file folder માં મૂકો.");
+function playMusic(){
+
+    const music = document.getElementById("music");
+
+    music.play().catch(function(){
+        alert("Music file not found.");
     });
+
+    document.getElementById("videos").style.display = "block";
+
+    document.getElementById("videos").scrollIntoView({
+        behavior:"smooth"
+    });
+
 }
+
 </script>
 
 </body>
 </html>
+```
