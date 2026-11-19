@@ -1,138 +1,138 @@
 
-!DOCTYPE html
-html lang=en
-head
-meta charset=UTF-8
-meta name=viewport content=width=device-width, initial-scale=1.0
-titleHappy Birthday Veeu Bhai ❤️title
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Veeu Bhai ❤️</title>
 
-style
- {
-    margin 0;
-    padding 0;
-    box-sizing border-box;
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background linear-gradient(135deg, #10001f, #360047, #080018);
-    color white;
-    font-family Arial, sans-serif;
-    text-align center;
-    min-height 100vh;
-    overflow hidden;
+    background: linear-gradient(135deg, #10001f, #360047, #080018);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .container {
-    padding 100px 20px;
+    padding: 100px 20px;
 }
 
 .heart {
-    font-size 80px;
-    animation heartbeat 1s infinite;
+    font-size: 80px;
+    animation: heartbeat 1s infinite;
 }
 
 h1 {
-    color #ff70c8;
-    font-size 38px;
-    margin 25px 0;
-    text-shadow 0 0 20px #ff00aa;
+    color: #ff70c8;
+    font-size: 38px;
+    margin: 25px 0;
+    text-shadow: 0 0 20px #ff00aa;
 }
 
 h2 {
-    color #ffd700;
-    margin-bottom 25px;
+    color: #ffd700;
+    margin-bottom: 25px;
 }
 
 p {
-    font-size 18px;
-    line-height 1.8;
-    color #ffe8f7;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffe8f7;
 }
 
 button {
-    margin-top 30px;
-    padding 15px 30px;
-    border none;
-    border-radius 30px;
-    background #ff168f;
-    color white;
-    font-size 18px;
-    cursor pointer;
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ff168f;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .butterfly {
-    position absolute;
-    font-size 35px;
-    animation fly 7s infinite linear;
+    position: absolute;
+    font-size: 35px;
+    animation: fly 7s infinite linear;
 }
 
 @keyframes heartbeat {
-    50% { transform scale(1.3); }
+    50% { transform: scale(1.3); }
 }
 
 @keyframes fly {
-    0% { left -10%; top 80%; }
-    50% { top 20%; }
-    100% { left 110%; top 60%; }
+    0% { left: -10%; top: 80%; }
+    50% { top: 20%; }
+    100% { left: 110%; top: 60%; }
 }
 
 #message {
-    display none;
-    margin-top 25px;
-    color #ffb6e6;
-    font-size 20px;
+    display: none;
+    margin-top: 25px;
+    color: #ffb6e6;
+    font-size: 20px;
 }
 
-style
-head
+</style>
+</head>
 
-body
+<body>
 
-div class=butterfly🦋div
+<div class="butterfly">🦋</div>
 
-div class=container
+<div class="container">
 
-    div class=heart❤️div
+    <div class="heart">❤️</div>
 
-    h1Happy Birthday!h1
+    <h1>Happy Birthday!</h1>
 
-    h2🎂 VEEU BHAI 🎂h2
+    <h2>🎂 VEEU BHAI 🎂</h2>
 
-    p
-        Dear Veeu Bhai ❤️br
-        May your life always be full of happiness,br
-        success, love and beautiful memories.br
+    <p>
+        Dear Veeu Bhai ❤️<br>
+        May your life always be full of happiness,<br>
+        success, love and beautiful memories.<br>
         Keep smiling and keep shining! ✨
-    p
+    </p>
 
-    button onclick=showWish()
+    <button onclick="showWish()">
         Open Your Surprise 🎁
-    button
+    </button>
 
-    div id=message
-        🎉 Happy Birthday Veeu Bhai! 🎉br
+    <div id="message">
+        🎉 Happy Birthday Veeu Bhai! 🎉<br>
         You are special. Stay blessed forever! ❤️🦋
-    div
+    </div>
 
-div
+</div>
 
-script
+<script>
 function showWish() {
-    document.getElementById(message).style.display = block;
+    document.getElementById("message").style.display = "block";
 
-    for(let i = 0; i  40; i++) {
-        let heart = document.createElement(div);
-        heart.innerHTML = 💖;
-        heart.style.position = absolute;
-        heart.style.left = Math.random()  100 + vw;
-        heart.style.top = Math.random()  100 + vh;
-        heart.style.fontSize = 25px;
+    for(let i = 0; i < 40; i++) {
+        let heart = document.createElement("div");
+        heart.innerHTML = "💖";
+        heart.style.position = "absolute";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.top = Math.random() * 100 + "vh";
+        heart.style.fontSize = "25px";
         document.body.appendChild(heart);
 
-        setTimeout(() = heart.remove(), 2500);
+        setTimeout(() => heart.remove(), 2500);
     }
 }
-script
+</script>
 
-body
-html
+</body>
+</html>
